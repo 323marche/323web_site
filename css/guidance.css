@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+/* HERO Basicはcommon.css */
+.sub-hero {
+  background-image: url(../img/heros/guidanceHeader.jpg);
+}
+
 
 /* WRAPPER */
 .guidance--wrapper {

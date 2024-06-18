@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>323マルシェ</title>
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/common_sp.css">
-  <link rel="stylesheet" href="css/gallery.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  <script src="switch.js" defer></script>
-  <script src="js/switch.js" defer></script>
-  <script src="js/toggle.js" defer></script>
-  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js" defer></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>323Marche</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/common_sp.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  <script src="switch.js" defer></script>
+    <script src="js/switch.js" defer></script>
+    <script src="js/toggle.js" defer></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js" defer></script>
+  </head>
+    <body>
 
   <header>
     <article class="header">
       <div class="upper">
-        <a href="index.html" class="logo"></a>
+        <a href="index.html" class="logo" id="top"></a>
         <div class="users">
           <section class="user">
             <p>ゲストさま</p>
@@ -30,7 +33,7 @@
               <ul>
                 <a href="guidance.html"><li>ご利用ガイド</li></a>
                 <a href="recommendation.html"><li>おすすめ</li></a>
-                <a href="event.html"></a><li>イベント</li>
+                <a href="event.html"><li>イベント</li></a>
               </ul>
             </section>
 
@@ -47,11 +50,7 @@
                 </select>
               </div>
               <input type="text">
-              <button class="search-button">
-                <span class="material-symbols-outlined">
-                  search
-                </span>
-              </button>
+              <button class="search-button"></button>
             </section>
           </div>
         </div>
@@ -108,11 +107,7 @@
           </select>
         </div>
         <input type="text">
-        <button class="search-button">
-          <span class="material-symbols-outlined">
-          search
-          </span>
-        </button>
+        <button class="search-button"></button>
       </section>
 
       <section class="select">
@@ -136,34 +131,18 @@
   <!-- HeaderHeroセクション -->
   <section class="sub-hero">
     <div class="hero-text">
-      <h1 class="hero-message1">Guidance</h1>
-      <h2 class="hero-message2">Terms and Conditions.</h2>
+      <h1 class="hero-message1" data-text="Futuristic marche">Futuristic marche</h1>
+      <h2 class="hero-message2"   data-text="Living in the future">Living in the future</h2>
     </div>
   </section>
 
-  <!-- Contentsセクション -->
-  <section class="top">
-    <div class="parallax-wrap">
-      <!-- <div class="back"></div>
-      <div class="mid"></div>
-      <div class="front"></div> -->
-      <img class="assets cloud" src="img/assets/cloud.png" alt="">
-      <img class="assets house" src="img/assets/house.png" alt="">
-      <img class="assets leaf" src="img/assets/leaf.png" alt="">
-      <div class="assets date">
-        <img class="knban" src="img/assets/kanban.png" alt="">
-        <div class="description">
-          <p>開催日</p>
-          <p>3月23日(土)</p>
-          <p>時間</p>
-          <p>10:30~15:30</p>
-        </div>
-      </div>
-      <img class="assets logo" src="img/assets/logo.png" alt="">
-      <img class="assets tori" src="img/assets/tori.png" alt="">
-      <img class="assets hatu" src="img/assets/hatu-syuxtutenn.png" alt="">
+  <!-- HEROセクション -->
+  <section class="about">
+    <div class="about-text">
+      <h2 data-text="About Us">About Us</h2>
     </div>
   </section>
+
   <section class="hero">
     <section class="container" id="top">
       <div class="slider" id="slider1">
@@ -622,31 +601,36 @@
 </main>
 
 <footer>
-  <div class="footer-inner">
-    <a href="index.html">
-      <img class="footer-logo" src="img/assets/logo.png" alt="">
-    </a>
-    <nav class="footer-menu">
-      <ul class="footer-menu-list nav-items">
-        <li class="list"><a href="#space">開催地<span></span><i class='bx bx-run'></i></a></li>
-        <li class="list"><a href="pdf.html">PDFチラシ<span></span><i class='bx bx-cart'></i></a></li>
-        <li class="list"><a href="pdfichiran.html">PDF出展者<span></span><i class='bx bxs-bowl-rice'></i></a></li>
-        <li class="list icon"><a href="https://www.instagram.com/323marche/"><img src="img/icon/instagram-logo-24.png" alt=""><span></span>instagram</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="space-k" id="space">
-    <a href="https://rentalspacek.com/" target="blank" rel="noreferrer noopener">
-      <p>レンタルスペースK サイトへ</p>
-      <img src="img/icon/space-k.png" alt="">
-    </a>
-    <p>0120-455-335</p>
-    <a href="https://rentalspacek.com/access.html" target="blank" rel="noreferrer noopener">
-      <p>MAP <i class='bx bx-map' ></i>マップへGo！</p>
-    </a>
-  </div>
+  <section class="footer">
+    <div class="marche">
+      <h2>323marcheについて</h2>
+      <a href="323marche/shops.html">Shop一覧</a>
+      <a href="https://www.instagram.com/323marche" target="blank" rel="noopener noreferrer">
+        <p>323マルシェのSNS
+          <span class="material-symbols-outlined for">
+          arrow_forward_ios
+          </span>
+          <img src="img/icon/instagram-logo-24.png" alt="" class="instagram">
+        </p>
+      </a>
+      <a href="contact.html" class="contact"><p>お問合せ</p></a>
+    </div>
+    <div class="footer-logo">
+      <a href="index.html"><img src="img/323Marchelogo.png" alt="" class="logo"></a>
+    </div>
+    <div class="guidance">
+      <a href="guidance.html"><h2>ご案内</h2></a>
+      <a href="guidance.html#gui1">商品のお取り扱い方法</a>
+      <a href="guidance.html#gui2">返品・再注文について</a>
+      <a href="guidance.html#gui3">返金・返品及びキャンセルポリシー</a>
+      <a href="guidance.html#gui4">個人情報の取り扱いに関する同意条項</a>
+      <a href="guidance.html#gui5">Cookieポリシー</a>
+      <a href="guidance.html#gui6">特定商取引に関する法律に基づく表示</a>
+      <a href="guidance.html#gui7">古物営業法に基づく表示</a>
+    </div>
+  </section>
 
-
-</footer>  
+  <p class="copyright"><small>©323Marche</small></p>
+</footer>
 </body>
 </html>

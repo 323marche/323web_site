@@ -77,6 +77,9 @@ header {
   display: flex;
   align-items: center;
 }
+.search-button {
+  background: #333 url(../img/icon/search-regular-24.png) no-repeat 0% 0% / cover;
+}
 
 .sp-header {
   display: none;
@@ -189,9 +192,8 @@ input {
 /* HeaderHeroセクション */
 .sub-hero {
   width: 100%;
-  height: 70vh;
+  height: calc(100vh - 24vh);
   background-color: #000;
-  background-image: url(../img/heros/guidance.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -200,17 +202,34 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+  background-attachment: fixed;
 }
 .sub-hero .hero-text {
-  transform: translateX(20%);
+  transform: translateX(15%);
 }
 .sub-hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  font-weight: bold;
+  position: relative;
 }
+.sub-hero h2 {
+  font-size: 1.5rem;
+  color: var(--accentColor);
+  position: relative;
+}
+.sub-hero h1::before, .sub-hero h2::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  transform: translate(1%, 1%);
+  z-index: -10;
+}
+
 .sub-hero h1, .sub-hero h2 {
-  mix-blend-mode:color-burn;
+  mix-blend-mode: difference;
 }
 
 
