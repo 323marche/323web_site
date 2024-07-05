@@ -1,0 +1,80 @@
+@charset "utf-8";
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sec1 {
+    width: 100%;
+    height: 100vh;
+    background : #333 url( ../img/pawel-czerwinski-3k9PGKWt7ik-unsplash.jpg ) no-repeat 0% 50% / cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sec1 h1 {
+    font-size: 8rem;
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 1px 1px #fff, 3px 3px #61ffff, 5px 5px #ff77c6;
+}
+.sec1 p {
+    font-size: 1.2rem;
+}
+
+.sec2 {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    padding: 5% 10%;
+    background-color: #000;
+    position: relative;
+  }
+  .sec2 h2 {
+    font-size: 3rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 2;
+    text-transform: uppercase;
+    animation: scroll-x linear forwards;
+    animation-timeline: view();
+  }
+  .sec2 span {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    animation: scroll-x linear forwards;
+    animation-timeline: view();
+  }
+  /* .scroll-reveal p {
+    font-size: 1.3rem;
+    animation: scroll-reveal linear forwards;
+    animation-timeline: view();
+    animation-range-start: contain 10vh;
+    animation-range-end: contain 40vh;
+  } */
+  .sec2 > * {
+    margin: 0;
+    color: #ffffff00;/* 初期状態の不当明度の調整をする */
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-image: linear-gradient(115deg, red, blue);
+  }
+  @keyframes scroll-x {
+    to {
+      background-size: 100% 100%;
+    }
+  }
+.sec2 h2, .sec2 span {
+
+}
+
+.sec3 {
+    width: 100%;
+    height: 100vh;
+    background-color: #f58383;
+}

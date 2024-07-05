@@ -31,28 +31,26 @@ img {
 html {
   background-color: var(--baseColor);
   width: 100vw;
-
+  overflow-x: hidden;
 }
 body {
   font-family: "Poppins", sans-serif;
-  font-size: clamp(0.9rem, 1.1vw, 1.2rem);
+  font-size: clamp(0.8rem, 0.818rem + 0.91vw, 1rem);
   width: 100%;
   height: auto;
   margin: 0 auto;
   background: #fff;
-  overflow-x: hidden;
 }
 
 /* HEADERセクション */
 header {
   width: 100%;
-}
-.header {
   width: 100%;
   /* background-color: var(--baseColor); */
 }
 .header .logo {
-  width: 22%;
+  display: block;
+  width: 18%;
   background-image: url(../img/323marche_textlogo.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -190,9 +188,12 @@ input {
 }
 
 /* HeaderHeroセクション */
+.toggle {
+  display: none;
+}
 .sub-hero {
   width: 100%;
-  height: calc(100vh - 24vh);
+  height: calc(80vh - 24vh);
   background-color: #000;
   background-position: center;
   background-repeat: no-repeat;
@@ -200,36 +201,27 @@ input {
   position: relative;
   color: #1e1e1e;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  background-attachment: fixed;
+  align-items: center;
+  position: sticky;
 }
 .sub-hero .hero-text {
-  transform: translateX(15%);
+  width: fit-content;
 }
 .sub-hero h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
   font-weight: bold;
-  position: relative;
+  text-shadow: 2px 2px #fff;
 }
 .sub-hero h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--accentColor);
-  position: relative;
-}
-.sub-hero h1::before, .sub-hero h2::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #fff;
-  transform: translate(1%, 1%);
-  z-index: -10;
+  text-shadow: 2px 2px #fff;
 }
 
 .sub-hero h1, .sub-hero h2 {
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 }
 
 
@@ -268,7 +260,7 @@ footer {
 }
 
 .copyright {
-  font-size: 14px;
   font-weight: bold;
   margin-top: 90px;
 }
+

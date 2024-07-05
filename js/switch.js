@@ -1,9 +1,18 @@
-function changeSlider(n) {
-  document.querySelectorAll('.slider').forEach(function(slider) {
-    slider.style.display = 'none';
+document.addEventListener("DOMContentLoaded", function() {
+  const sliders = document.querySelectorAll('.slider');
+  const buttons = document.querySelectorAll('.button-container button');
+
+  buttons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      sliders.forEach(slider => slider.style.display = 'none'); // すべてのスライダーを非表示にする
+      sliders[index].style.display = 'block'; // クリックされたボタンに対応するスライダーを表示する
+    });
   });
-  document.getElementById(`slider${n}`).style.display = 'block';
-}
+
+  // 最初のスライダーを表示する（初期表示）
+  sliders[0].style.display = 'block';
+});
+
 
 function changeSlide(n, sliderNumber) {
   const slider = document.getElementById(`slider${sliderNumber}`);

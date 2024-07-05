@@ -1,0 +1,146 @@
+
+@media screen and (max-width: 870px) {
+
+  /* セクション共通タイトル */
+  .sec-title {
+    font-size: 1.6rem;
+  }
+
+  /* Aboutセクション */
+  .about {
+    height: 80vh;
+    padding: 0% 10%;
+    margin: 5% auto;
+  }
+  .about .fade {
+    width: 70%;
+  }
+  .about .fade .img {
+    width: 100%;
+
+  }
+  .image-text {
+    mix-blend-mode: difference;
+  }
+  .image-text2 {
+  }
+
+
+
+  
+  /* Noticeセクション */
+  .card-wrapper .card {
+    width: 40%;
+  }
+  .card-wrapper figcaption {
+    font-size: 0.9rem;
+  }
+  .notice .image1 {
+    width: 45%;
+  }
+  .notice .image2 {
+    width: 60%;
+  }
+  .notice .instagram img {
+    width: 20%;
+  }
+
+  
+
+/* Sliderセクション */
+.slider-section {
+  height: 50vh;
+}
+.shops-container {
+  height: 40%;
+}
+
+/* Shop-listセクション */
+.list-card {
+  width: 100%;
+  line-height: 1.8;
+  color: var(--fontColor);
+  text-align: left;
+  font-size: 1rem;
+  padding: 2% 2% 2% 10%;
+}
+.list {
+  flex-direction: column;
+  flex-wrap:nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+
+
+
+/* Galleryセクション */
+.gallery .various-gallery {
+  display: block;
+}
+.gallery .card {
+  width: 40%;
+  margin: 5% auto;
+}
+.gallery .card-title {
+  font-size: 1.2rem;
+}
+
+.card-open-wrapper {
+  width: 80%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-height: 85vh;
+}
+
+.wrap-img-container {
+  width: 80%;
+  height: auto;
+  display: block;
+  flex-shrink: 0; 
+  position: sticky;
+}
+.card-open h3 {
+  font-size: 1.2rem;
+}
+
+
+.wrap-img {
+  width: 100%;
+}
+.card-open {
+  width: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+.card-open p {
+  font-size: 1rem;
+}
+.card-open .close {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 10%;
+  aspect-ratio: 1;
+  z-index: 20;
+  justify-content: end;
+}
+  
+  
+
+  
+
+  
+  
+}
+
+
+  
+
+
+
+
+

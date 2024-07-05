@@ -1,25 +1,49 @@
 
 @media screen and (max-width: 870px) {
-  body {
-    width: 100vw;
-  }
+
   .header {
     display: none;
   }
 
+  .sp-header .logo {
+    width: 40%;
+  }
+  
+
   .sp-header {
     display: block;
     width: 100%;
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
     /* height: 50vh; */
-    background: #ffffff25;
-    color: #000000;
+    background: #ffffff;
+    color: #333;
     padding-top: var(--spRowGap);
     padding-bottom: var(--spRowGap);
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 100;
   }
+
+  /* Toggle */
+  .toggle {
+    display: block;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 10%;
+    aspect-ratio: 1;
+  }
+  .sub-hero .toggle {
+    filter: invert(100%);
+  }
+
+
   .sp-header .bg-img {
     width: 40%;
   }
@@ -30,8 +54,8 @@
   .sp-user {
     width: 100%;
     height: 20%;
-    padding-top: 8%;
-    padding-bottom: 8%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,16 +95,58 @@
     margin-bottom: 8%;
   }
 
-  .select h3 {
+  .select h2 {
     text-align: center;
     color: #ff6243;
   }
 
+  .sp-header.active {
+    transform: translateY(0);
+    transition: all 0.5s ease-in-out;
+  }
+
+
+
   /* HeaderHeroセクション */
-  .sub-hero .hero-text {
-    transform: translate(20%, 100%);
+  .sub-hero {
+    height: 80vh;
+    background-position: bottom center;
+  }
+
+  .sub-hero h1 {
+    font-size: 3rem;
+    padding-left: 5%;
+  }
+  .sub-hero h2 {
+    font-size: 2rem;
+    padding-left: 5%;
+  }
+
+  /* Aboutセクション */
+  .about {
+    height: 80vh;
+    justify-content: space-evenly;
+    padding: 0% 10%;
+    margin: 5% auto;
+  }
+  .about .img {
+    width: 300px;
+    aspect-ratio: 1.5;
+    background : transparent url(../img/assets/kansha.png) no-repeat center / cover;
+    margin-top: 15%;
+    transform: rotate(-15deg);
+  }
+  .image-text {
+    margin-top: 5%;
+    transform: translateX(-25%);
+  }
+  .image-text2 {
+    text-align: center;
   }
   
+
+
+  /* Footerセクション */
   .footer {
     display: block;
   }
@@ -89,5 +155,9 @@
     margin: 0 auto;
   }
   
-}
+
+  
+}  
+
+
 

@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  width: 100%;
+}
+
+/* hero */
+.section-wrap {
+  width: 100vw;
+  position: relative;
+}
+.point-img {
+  width: 10%;
+  aspect-ratio: 1;
+  background-image: url(../img/assets/house.png);
+  background-position: center;
+  background-size: cover;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+}
+.header {
+  width: 50px;
+  height: 50px;
+  background-color: #dff13a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  box-shadow: 2px 2px 5px #f3f0f08a;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-color: #929292;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/pawel-czerwinski-3k9PGKWt7ik-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.hero h1 {
+  font-size: 8rem;
+  line-height: 2.5;
+  text-transform: uppercase;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-shadow: 1px 1px #fff,3px 3px #42fcd3, 5px 5px #ff6a6a;
+  transform: scale(100%);
+  animation: hero linear forwards;
+  animation-timeline: view(block 10% 50%);
+  /* (block start位置からの値　end位置からの値) 
+  animation-range-start: contain 20vh; 
+  animation-range-end: contain 20vh; 
+  の記述でもOK！ */
+}
+.hero p {
+  font-size: 1.75rem;
+  line-height: 1.3;
+  text-shadow: 1px 1px #fff,3px 3px #42fcd3, 5px 5px #ff6a6a;
+  margin-inline: auto;
+  transform: scale(100%);
+  animation: hero linear forwards;
+  animation-timeline: view(block 10% 50%);
+}
+
+@keyframes hero {
+  to {
+    transform: scale(0%);
+  }
+}
+
+
+/* scroll-reveal */
+
+.scroll-reveal {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  padding: 5% 10%;
+  background-color: #000;
+  position: relative;
+}
+.scroll-reveal h2 {
+  font-size: 3rem;
+  line-height: 2;
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view();
+}
+.scroll-reveal span {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-inline: auto;
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view();
+}
+.scroll-reveal p {
+  font-size: 1.3rem;
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view();
+  animation-range-start: contain 10vh;/* アニメーション始まり */
+  animation-range-end: contain 40vh;/* アニメーション終わり */
+}
+.scroll-reveal > * {
+  margin: 0;
+  color: hsl(0 0% 100% / 0);/* 初期状態の不当明度の調整をする */
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-image: linear-gradient(115deg, red, blue);
+}
+
+@keyframes scroll-reveal {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+.text-clip {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5% 10%;
+  background-color: #eaee10;
+  position: relative;
+  background-image: url(../img/robot-8815014_1280.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.text-clip h2 {
+  margin: 0;
+  color: transparent;/* 初期状態の不当明度の調整をする */
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0 0;
+  background-image: url(../img/pawel-czerwinski-3k9PGKWt7ik-unsplash.jpg);
+}
+
+.text-clip h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 8rem;
+  line-height: 2;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px #e74a86;
+}
+
+.text-clip .open-box {
+  width: 50%;
+  height: 40vh;
+  inset: 0 0;
+  border: 3px solid #fff;
+  padding: 5%;
+  background-color: #ffffff41;
+  backdrop-filter: blur(15px);
+  text-transform: uppercase;
+}
+.open-box h3 {
+  color: #ff6a6a;
+  -webkit-text-stroke: 1px #e9f726;
+  font-size: 2rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  mix-blend-mode: overlay;
+}
+.open-box p {
+  color: #fff;
+}
